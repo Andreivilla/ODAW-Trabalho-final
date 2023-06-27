@@ -160,3 +160,23 @@ select {
     background: white;
     color: rgb(255, 200, 0);
 }
+
+/*Area global da pagina*/
+.global-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite a quebra de linha */
+  }
+  
+  .left, .right {
+    flex: 1;
+    height: 100vh; /* Define a altura total da página */
+  }
+  
+  .left {
+    background-color: #eef; /* Cor de fundo da div esquerda */
+  }
+  
+  .right {
+    background-color: #ffe; /* Cor de fundo da div direita */
+  }
+  

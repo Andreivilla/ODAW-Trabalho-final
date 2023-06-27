@@ -23,43 +23,51 @@
     <header>
         <h1>App academia</h1>
     </header>
-    
-    <form id="formulario" action="">
-        <select class="set-input" id="exercicio">
-            <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
-        </select>
-        <select class="set-input" id="carga">
-            <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
-        </select>
-        <select class="set-input" id="repeticoes">
-            <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
-        </select>
-        <button class="set-button" type="submit" onclick="submitForm(event)">
-            <i class="fas fa-plus-circle fa-lg"></i><!--submeter-->
-        </button>
-    </form>
-    
-    <script>
-        // Preenche as opções de 1 a 1000 nos campos de seleção
-        function populateOptions() {
-            var selectFields = document.querySelectorAll('.set-input');
-    
-            for (var i = 1; i <= 1000; i++) {
-                var option = document.createElement('option');
-                option.text = i;
-                option.value = i;
-    
-                for (var j = 0; j < selectFields.length; j++) {
-                    selectFields[j].appendChild(option.cloneNode(true));
-                }
-            }
-        }    
-        // Chama a função para preencher as opções nos campos de seleção
-        populateOptions();
-    </script>
 
-    <div class="set-container">
-        <ul class="set-list"></ul>
+    <div class="global-container">
+        
+        <div class="left">
+
+            <form id="formulario" action="">
+                <select class="set-input" id="exercicio">
+                    <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
+                </select>
+                <select class="set-input" id="carga">
+                    <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
+                </select>
+                <select class="set-input" id="repeticoes">
+                    <!-- Opções de 1 a 1000 preenchidas dinamicamente -->
+                </select>
+                <button class="set-button" type="submit" onclick="submitForm(event)">
+                    <i class="fas fa-plus-circle fa-lg"></i><!--submeter-->
+                </button>
+            </form>
+            
+            <script>
+                // Preenche as opções de 1 a 1000 nos campos de seleção
+                function populateOptions() {
+                    var selectFields = document.querySelectorAll('.set-input');
+            
+                    for (var i = 1; i <= 1000; i++) {
+                        var option = document.createElement('option');
+                        option.text = i;
+                        option.value = i;
+            
+                        for (var j = 0; j < selectFields.length; j++) {
+                            selectFields[j].appendChild(option.cloneNode(true));
+                        }
+                    }
+                }    
+                // Chama a função para preencher as opções nos campos de seleção
+                populateOptions();
+            </script>
+
+            <div class="set-container">
+                <ul class="set-list"></ul>
+            </div>
+        </div>
+
+        <div class="right">Graficos</div>
     </div>
 
     <script src="./script.js"></script>
