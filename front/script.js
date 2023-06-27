@@ -41,9 +41,25 @@ function addSet(event) {
     setDiv.classList.add("set");
     
     const newSet = document.createElement("li");
-    newSet.innerText = setInfos; 
     newSet.classList.add("set-item");
+
+    const carga = document.createElement("div")
+    carga.innerText = setInfos[0]
+    carga.classList.add("set-item-tipo")
+    const peso = document.createElement("div")
+    peso.innerText = setInfos[1]
+    peso.classList.add("set-item-tipo")
+    const repeticoes = document.createElement("div")
+    repeticoes.innerText = setInfos[2]
+    repeticoes.classList.add("set-item-tipo")
+
+    //newSet.innerText = set[0];
+    newSet.appendChild(carga)
+    newSet.appendChild(peso)
+    newSet.appendChild(repeticoes)
+
     setDiv.appendChild(newSet);
+    
 
     //salva valores no localstorage
     saveLocalSets(setInfos);//ta aqui ó
@@ -63,6 +79,7 @@ function addSet(event) {
     //adiciona a div
     setList.appendChild(setDiv);
     setInput.value = "";
+    
 }
 
 function saveLocalSets(arraySet){
@@ -86,9 +103,26 @@ function getLocalSets() {
     }
     sets.forEach(function(set) {
         const setDiv = document.createElement("div");
+        
         setDiv.classList.add("set");
         const newSet = document.createElement("li");
-        newSet.innerText = set;
+        
+        const carga = document.createElement("div")
+        carga.innerText = set[0]
+        carga.classList.add("set-item-tipo")
+        const peso = document.createElement("div")
+        peso.innerText = set[1]
+        peso.classList.add("set-item-tipo")
+        const repeticoes = document.createElement("div")
+        repeticoes.innerText = set[2]
+        repeticoes.classList.add("set-item-tipo")
+
+        //newSet.innerText = set[0];
+        newSet.appendChild(carga)
+        newSet.appendChild(peso)
+        newSet.appendChild(repeticoes)
+
+
         newSet.classList.add("set-item");
         setDiv.appendChild(newSet);
 

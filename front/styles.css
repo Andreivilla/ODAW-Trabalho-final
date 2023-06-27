@@ -100,6 +100,11 @@ form button:hover {
 
 .set-item {
     padding: 0rem 0.5rem;
+    display: flex;
+}
+.set-item-tipo{
+    display: inline-block;
+    flex: 1;
 }
 
 .fa-trash, 
