@@ -10,6 +10,7 @@ setList.addEventListener("click", deleteCheck);
 
 
 //setando os seletores e capturando seus valores
+const selectData = document.querySelector("#data");
 const selectExercicio = document.querySelector("#exercicio");
 const selectCarga = document.querySelector("#carga");
 const selectRepeticoes = document.querySelector("#repeticoes");
@@ -18,6 +19,9 @@ selectExercicio.addEventListener("change", exibirValorExercicico);
 selectCarga.addEventListener("change", exibirValorCarga);
 selectRepeticoes.addEventListener("change", exibirValorRepeticoes);
 
+function dataChangeValue() {
+    return selectData.value;
+}
 function exercicoChangeValue() {
     return selectExercicio.value;
 }
@@ -31,6 +35,7 @@ function repeticoesChangeValue() {
 //Adiciona set no localstorage
 function addSet(event) {
     setInfos = []
+    setInfos.push(dataChangeValue())
     setInfos.push(exercicoChangeValue())
     setInfos.push(cargaChangeValue())
     setInfos.push(repeticoesChangeValue())
@@ -43,17 +48,21 @@ function addSet(event) {
     const newSet = document.createElement("li");
     newSet.classList.add("set-item");
 
+    const data = document.createElement("div")
+    data.innerText = setInfos[0]
+    data.classList.add("set-item-tipo")
     const carga = document.createElement("div")
-    carga.innerText = setInfos[0]
+    carga.innerText = setInfos[1]
     carga.classList.add("set-item-tipo")
     const peso = document.createElement("div")
-    peso.innerText = setInfos[1]
+    peso.innerText = setInfos[2]
     peso.classList.add("set-item-tipo")
     const repeticoes = document.createElement("div")
-    repeticoes.innerText = setInfos[2]
+    repeticoes.innerText = setInfos[3]
     repeticoes.classList.add("set-item-tipo")
 
     //newSet.innerText = set[0];
+    newSet.appendChild(data)
     newSet.appendChild(carga)
     newSet.appendChild(peso)
     newSet.appendChild(repeticoes)
@@ -107,17 +116,21 @@ function getLocalSets() {
         setDiv.classList.add("set");
         const newSet = document.createElement("li");
         
+        //adiciona elementos do formulario
+        const data = document.createElement("div")
+        data.innerText = set[0]
+        data.classList.add("set-item-tipo")
         const carga = document.createElement("div")
-        carga.innerText = set[0]
+        carga.innerText = set[1]
         carga.classList.add("set-item-tipo")
         const peso = document.createElement("div")
-        peso.innerText = set[1]
+        peso.innerText = set[2]
         peso.classList.add("set-item-tipo")
         const repeticoes = document.createElement("div")
-        repeticoes.innerText = set[2]
+        repeticoes.innerText = set[3]
         repeticoes.classList.add("set-item-tipo")
 
-        //newSet.innerText = set[0];
+        newSet.appendChild(data)
         newSet.appendChild(carga)
         newSet.appendChild(peso)
         newSet.appendChild(repeticoes)
