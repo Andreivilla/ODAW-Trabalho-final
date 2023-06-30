@@ -50,9 +50,14 @@
             </div>
         </div>
 
-        <div class="right">Graficos</div>
+        <div class="right">
+          <select id="exercicioSelect" onchange="updateChart()">
+          </select>
+          <canvas id="myChart"></canvas>
+        </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./graphScript.js"></script>
     <script src="./inputScript.js"></script>
     <script src="./script.js"></script>
     
