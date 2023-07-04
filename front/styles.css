@@ -180,4 +180,15 @@ select {
   .right {
     background-color: #ffe; /* Cor de fundo da div direita */
   }
+  /* Media query personalizada para definir a quantidade de pixels */
+@media (max-width: 600px) {
+    .left, .right {
+      flex-basis: 100%; /* Define a base de flexibilidade para 100% */
+      height: auto; /* Define a altura automática */
+    }
+  }
   
+  #myChart {
+    max-width: 400px;
+    margin: 0 auto;
+  }
