@@ -74,11 +74,12 @@ function addSet(event) {
     saveLocalSets(setInfos);//ta aqui ó
 
     //botão de check deixa ele aqui vai q é util ter um botão ali tipo um alterar
+    /*
     const completedButton = document.createElement("button");
     completedButton.innerHTML = '<i class="fas fa-check-circle"></li>';
     completedButton.classList.add("complete-btn");
     setDiv.appendChild(completedButton);
-
+    */
     //ignore por enquanto
     const trashButton = document.createElement("button");
     trashButton.innerHTML = '<i class="fas fa-trash"></li>';

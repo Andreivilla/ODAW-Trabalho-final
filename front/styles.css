@@ -15,7 +15,7 @@ header {
     font-size: 1.5rem;
 }
 
-header, 
+/*header, */
 form {
     min-height: 20vh;
     display: flex;
@@ -29,10 +29,10 @@ form button {
     padding-left: 1rem;
     font-size: 1.8rem;
     border: none;
-    background: white;
+    /*background: white;*/
     border-radius: 2rem;
 }
-
+/*Botão */
 form button {
     color: rgb(255, 200, 0);
     background: white;
@@ -137,6 +137,8 @@ select {
     border-radius: 50px;
 }
 
+
+
 select {
     color:rgb(255, 200, 0);
     font-size: 1.2rem;
@@ -174,11 +176,12 @@ select {
   }
   
   .left {
-    background-color: #eef; /* Cor de fundo da div esquerda */
+    max-height: calc(100vh - 17px); /* Define a maximum height for the left page */
+    overflow-y: auto; /* Add a vertical scrollbar when necessary */
   }
   
   .right {
-    background-color: #ffe; /* Cor de fundo da div direita */
+    /*background-color: #ffe; /* Cor de fundo da div direita */
   }
   /* Media query personalizada para definir a quantidade de pixels */
 @media (max-width: 600px) {
@@ -189,6 +192,6 @@ select {
   }
 
   #myChart {
-    max-width: 500px;
+    max-width: 700px;/*tamanho dos graficos*/
     margin: 0 auto;
   }

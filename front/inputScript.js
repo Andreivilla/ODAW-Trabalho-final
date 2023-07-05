@@ -22,20 +22,17 @@ function populateDateOptions() {
             option.value = formatDate(previousDate);
             selectField.appendChild(option);
         }
-    }
+  }
 
   // Função para preencher as opções de 1 a 1000 nos campos de seleção restantes
-  function populateNumberOptions() {
-    var selectFields = document.querySelectorAll('.set-input:not(#exercicio)');
+  function popularCamposSelect(idCampo) {
+    var campoSelect = document.getElementById(idCampo);
 
     for (var i = 1; i <= 1000; i++) {
-      var option = document.createElement('option');
-      option.text = i;
+      var option = document.createElement("option");
       option.value = i;
-
-      for (var j = 0; j < selectFields.length; j++) {
-        selectFields[j].appendChild(option.cloneNode(true));
-      }
+      option.text = i;
+      campoSelect.appendChild(option);
     }
   }
 
@@ -79,6 +76,7 @@ function populateDateOptions() {
     }
 
     // Chama as funções para preencher as opções nos campos de seleção
-    populateDateOptions();
-    populateExerciseOptions();
-    populateNumberOptions();
+  populateDateOptions();
+  populateExerciseOptions();
+  popularCamposSelect("carga");
+  popularCamposSelect("repeticoes");
