@@ -13,7 +13,9 @@
     
     
     <link rel="stylesheet" href="./styles.css">
+
     
+
     
     <title>App academia</title>
     
@@ -24,8 +26,10 @@
         <h1>App academia</h1>
     </header>
 
+    <!--Corpo da pagina-->
+
     <div class="global-container">
-        
+        <!--esquerda adicionar series -->
         <div class="left">
             <form id="formulario" action="">
                 <select class="set-input" id="data">
@@ -49,12 +53,18 @@
                 <ul class="set-list"></ul>
             </div>
         </div>
-
+        <!--direita graficos-->
         <div class="right">
           <select id="exercicioSelect" onchange="updateChart()">
           </select>
           <canvas id="myChart"></canvas>
+          
+          <div>
+            <label for="numBarrasInput">Número de Barras:</label>
+            <input type="number" id="numBarrasInput" min="2" value="3" max="5">
+          </div>
         </div>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./graphScript.js"></script>
