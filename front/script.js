@@ -8,7 +8,6 @@ setButton.addEventListener("click", addSet);
 setList.addEventListener("click", deleteCheck);
 //filterOption.addEventListener("change", filterSet);
 
-
 //setando os seletores e capturando seus valores
 const selectData = document.querySelector("#data");
 const selectExercicio = document.querySelector("#exercicio");

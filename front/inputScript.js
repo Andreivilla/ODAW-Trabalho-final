@@ -63,19 +63,59 @@ function populateDateOptions() {
       });
   }
 
-
-
-
-
-    // Função para formatar a data no formato "DD/MM/YYYY"
-    function formatDate(date) {
+  // Função para formatar a data no formato "DD/MM/YYYY"
+  function formatDate(date) {
         var day = String(date.getDate()).padStart(2, '0');
         var month = String(date.getMonth() + 1).padStart(2, '0');
         var year = date.getFullYear();
         return day + '/' + month + '/' + year;
-    }
+   }
 
-    // Chama as funções para preencher as opções nos campos de seleção
+  //popular treinos
+  function popularSelectComTreinos(json) {
+    var selectElement = document.getElementById("treino");
+    selectElement.innerHTML = "";
+  
+    for (var i = 0; i < json.treinos.length; i++) {
+      var treino = json.treinos[i];
+  
+      var optionElement = document.createElement("option");
+      optionElement.value = treino.nome;
+      optionElement.text = treino.nome;
+  
+      selectElement.appendChild(optionElement);
+    }
+  
+    var cadastrarOption = document.createElement("option");
+    cadastrarOption.value = "cadastrar";
+    cadastrarOption.text = "Cadastrar novo treino";
+    cadastrarOption.setAttribute("data-url", "cadastrartreino.html");
+  
+    selectElement.appendChild(cadastrarOption);
+  
+    selectElement.addEventListener("change", function () {
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var url = selectedOption.getAttribute("data-url");
+  
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  }
+  
+  fetch("servidorquedevemandar/listatreinos.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      popularSelectComTreinos(json);
+    })
+    .catch(function (error) {
+      console.log("Erro ao ler o arquivo JSON:", error);
+    });
+  
+   
+  // Chama as funções para preencher as opções nos campos de seleção
   populateDateOptions();
   populateExerciseOptions();
   popularCamposSelect("carga");

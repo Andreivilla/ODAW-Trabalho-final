@@ -29,21 +29,23 @@
     <!--nav bar-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
+        <a class="navbar-brand" href="index.html">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="cadastrartreino/cadastrartreino.html">Cadastrar Treino</a>
             </li>
+            <!--
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled">Link</a>
             </li>
+            -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Minha conta
@@ -66,7 +68,15 @@
 
     <div class="global-container">
         <!--esquerda adicionar series -->
+        <!--Seleciona o treino-->
+
+        <!--formularios de telas-->
         <div class="left">
+          <div>
+            <select class="form-select form-select-lg mb-3" class="treino select" id="treino">
+            </select>
+          </div>
+
             <form id="formulario" action="">
                 <select class="form-select form-select-lg mb-3"  class="set-input" id="data">
                   <!-- Opções de datas preenchidas dinamicamente -->
@@ -85,10 +95,17 @@
                 </button>
               </form>              
 
+            <!--lista exercicos já cadastrados-->
             <div class="set-container">
                 <ul class="set-list"></ul>
             </div>
+
+            <!--Botão para salvar treino no banco-->
+            <div style="float: right;">
+              <button type="button" class="btn btn-success">Salvar Treino</button>
+            </div>
         </div>
+
         <!--direita graficos-->
         <div class="right">
           <select class="form-select form-select-lg mb-3" id="exercicioSelect" onchange="updateChart()">
@@ -102,9 +119,9 @@
               <option value="3" selected>3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-            </select>
-            
+            </select>            
           </div>
+          
         </div>
         
     </div>
