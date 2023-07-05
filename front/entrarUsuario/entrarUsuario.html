@@ -13,14 +13,14 @@
     <!--nav bar-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="../home/index.html">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="cadastrartreino/cadastrartreino.html">Cadastrar Treino</a>
+              <a class="nav-link active" aria-current="page" href="../cadastrartreino/cadastrartreino.html">Cadastrar Treino</a>
             </li>
             <!--
             <li class="nav-item">
@@ -35,8 +35,8 @@
                 Minha conta
               </a>
               <ul class="dropdown-menu" >
-                <li><a class="dropdown-item" href="entrar.html">Entrar</a></li>
-                <li><a class="dropdown-item" href="cadastrar.html">Cadastrar</a></li>
+                <li><a class="dropdown-item" href="../entrarUsuario/entrarUsuario.html">Entrar</a></li>
+                <li><a class="dropdown-item" href="../cadastrarUsuario/cadastrarUsuario.html">Cadastrar</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Sair</a></li>
               </ul>
@@ -48,28 +48,8 @@
 
       <!--formulario de login-->
       <div class="caixa">
+        <h2 class="titulo">Entrar</h2>
         <form>
-            <h2 class="titulo">Cadastrar</h2>
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nome</label>
-            <input type="email" class="form-control" id="nome" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Idade</label>
-            <input type="number" class="form-control" id="idade" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Peso</label>
-            <input type="number" class="form-control" id="peso" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Altura</label>
-            <input type="number" class="form-control" id="altura" aria-describedby="emailHelp">
-            </div>
-        
-
-
-            
             <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -78,7 +58,11 @@
             <label for="exampleInputPassword1" class="form-label">Senha</label>
             <input type="password" class="form-control" id="senha">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="lembrarCheck">Lembrar de mim</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
       </div>
 
