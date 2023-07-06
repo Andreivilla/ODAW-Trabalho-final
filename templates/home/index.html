@@ -7,7 +7,11 @@
     
     <!-- Font Awesome cdn css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--
     <link rel="stylesheet" href="./styles.css">
+    -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesHome.css') }}">
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -22,14 +26,14 @@
     <!--nav bar-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../home/index.html">Home</a>
+        <a class="navbar-brand" href="/">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../cadastrartreino/cadastrartreino.html">Cadastrar Treino</a>
+              <a class="nav-link active" aria-current="page" href="/cadastrar-treino">Cadastrar Treino</a>
             </li>
             <!--
             <li class="nav-item">
@@ -44,8 +48,8 @@
                 Minha conta
               </a>
               <ul class="dropdown-menu" >
-                <li><a class="dropdown-item" href="../entrarUsuario/entrarUsuario.html">Entrar</a></li>
-                <li><a class="dropdown-item" href="../cadastrarUsuario/cadastrarUsuario.html">Cadastrar</a></li>
+                <li><a class="dropdown-item" href="/entrar-usuario">Entrar</a></li>
+                <li><a class="dropdown-item" href="/cadastrar-usuario">Cadastrar</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Sair</a></li>
               </ul>
@@ -118,10 +122,18 @@
         </div>
         
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!--
     <script src="./graphScript.js"></script>
     <script src="./inputScript.js"></script>
     <script src="./script.js"></script>
-    
+    -->
+
+    <script src="{{ url_for('static', filename='scriptHome.js') }}"></script>
+    <!--
+    <script src="./scriptHome.js"></script>
+    -->
 </body>
 </html>
